@@ -21,10 +21,10 @@
       <div class="jumbotron">
         <h2 class="text-center">Loan Qualifier</h2>
         <!-- form element defines a form that is used to collect user input -->
-        <form>
+        <form name="myForm" onsubmit="return validateForm()" method="post">
           <div class="form-group">
             <label for="miles">Miles:</label>
-            <input id="miles" class="form-control" type="number" onclick="computeMPG" placeholder="Enter miles driven" />
+            <input id="miles" class="form-control" name="fname" type="number" onclick="computeMPG" placeholder="Enter miles driven" />
           </div>
           <div class="form-group">
             <label for="gallons">Gallons:</label>
