@@ -11,17 +11,18 @@ var mpg;        // To hold MPG
 function computeMPG(){
   // Get the miles driven and assign it to the miles variable.
   miles = parseFloat(document.getElementById('miles').value);
-  
-  // Get the gallons used and assign it to the gallons variable.
-  gallons =  parseInt(document.getElementById('gallons').value);
 
+  // Get the gallons used and assign it to the gallons variable.
+  gallons =  parseFloat(document.getElementById('gallons').value);
+
+  // Validate data entered
   if (miles === null || miles === "" || isNaN(miles)) {
-    alert("Miles must be filled out");
-    return false;
+    // Display an error message for miles
+    document.getElementById('outMPG').innerHTML = "Miles must be filled out!";
   }
   else if (gallons === null || gallons === "" || isNaN(gallons)) {
-    alert("Gallons must be filled out");
-    return false;
+    // Display an error message for gallons
+    document.getElementById('outMPG').innerHTML = "Gallons must be filled out!";
   }
   else {
     // Calculate MPG
